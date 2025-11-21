@@ -1,4 +1,4 @@
-$inputs = Get-Content .\04\input.txt
+$inputs = Get-Content .\2015\04\input.txt
 
 for ($i = 0; $i -lt 10000000; $i++) #starting $i can be taken from the part1 answer to speed up a bit
 {

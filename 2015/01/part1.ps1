@@ -1,5 +1,4 @@
-$inputs = Get-Content .\01\input.txt
-
+$inputs = Get-Content .\2015\01\input.txt
 
 $position = 0
 foreach ($char in [char[]]$inputs)

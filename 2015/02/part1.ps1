@@ -1,4 +1,4 @@
-$inputs = Get-Content .\02\input.txt
+$inputs = Get-Content .\2015\02\input.txt
 
 $totalArea = 0
 $inputs | ForEach-Object {

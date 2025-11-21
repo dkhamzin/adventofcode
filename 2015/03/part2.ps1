@@ -1,4 +1,4 @@
-$inputs = Get-Content .\03\input.txt
+$inputs = Get-Content .\2015\03\input.txt
 
 $coordsSanta = [System.Management.Automation.Host.coordinates]::new(0, 0)
 $coordsRoboSanta = [System.Management.Automation.Host.coordinates]::new(0, 0)

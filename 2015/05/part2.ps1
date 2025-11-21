@@ -1,4 +1,4 @@
-$inputs = Get-Content .\05\input.txt
+$inputs = Get-Content .\2015\05\input.txt
 
 $niceString = 0
 $inputs | ForEach-Object {
