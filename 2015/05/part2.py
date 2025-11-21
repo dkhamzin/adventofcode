@@ -11,9 +11,9 @@ for line in inputs.splitlines():
         pair = line[i:i+2]
         if line.count(pair) >= 2:
             # Ensure pairs do not overlap
-            first_index = line.find(pair)
-            second_index = line.find(pair, first_index + 2)
-            if second_index != -1:
+            firstIndex = line.find(pair)
+            secondIndex = line.find(pair, firstIndex + 2)
+            if secondIndex != -1:
                 pairCheck = True
 
         if i < len(line) - 2:
