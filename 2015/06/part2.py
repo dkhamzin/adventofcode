@@ -11,24 +11,24 @@ def line_parser(line):
     parts = line.split(" ")
     if parts[0] == "turn":
         action = parts[1]  #on or off
-        startCoords = parts[2]
-        endCoords = parts[4]
+        start_coords = parts[2]
+        end_coords = parts[4]
     elif parts[0] == "toggle":
         action = "toggle"
-        startCoords = parts[1]
-        endCoords = parts[3]
+        start_coords = parts[1]
+        end_coords = parts[3]
 
-    startX, startY = map(int, startCoords.split(","))
-    endX, endY = map(int, endCoords.split(","))
+    start_x, start_y = map(int, start_coords.split(","))
+    end_x, end_y = map(int, end_coords.split(","))
 
-    return action, startX, startY, endX, endY
+    return action, start_x, start_y, end_x, end_y
 
 
 for line in inputs.splitlines():
-    action, startX, startY, endX, endY = line_parser(line)
+    action, start_x, start_y, end_x, end_y = line_parser(line)
 
-    for x in range(startX, endX + 1):
-        for y in range(startY, endY + 1):
+    for x in range(start_x, end_x + 1):
+        for y in range(start_y, end_y + 1):
             if action == "on":
                 grid[(x,y)] += 1
             elif action == "off":
@@ -37,5 +37,5 @@ for line in inputs.splitlines():
             elif action == "toggle":
                 grid[(x,y)] += 2
 
-totalBrightness = sum(grid.values())
-print(totalBrightness)
+total_brightness = sum(grid.values())
+print(total_brightness)

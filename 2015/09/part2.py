@@ -5,29 +5,29 @@ with open(".\\2015\\09\\input.txt", "r", encoding="utf-8") as file:
 
 def line_parser(line):
     parts = line.split(" ")
-    startNode = parts[0]
-    endNode = parts[2]
+    start_node = parts[0]
+    end_node = parts[2]
     distance = int(parts[4])
-    return startNode, endNode, distance
+    return start_node, end_node, distance
 
 nodes = set()
 distances = {}
 
 
 for line in inputs.splitlines():
-    startNode, endNode, distance = line_parser(line)
-    nodes.add(startNode)
-    nodes.add(endNode)
-    distances[(startNode, endNode)] = distance
-    distances[(endNode, startNode)] = distance
+    start_node, end_node, distance = line_parser(line)
+    nodes.add(start_node)
+    nodes.add(end_node)
+    distances[(start_node, end_node)] = distance
+    distances[(end_node, start_node)] = distance
 
-maxDistance = None
+max_distance = None
 
 for chain in itertools.permutations(nodes):
-    totalDistance = 0
+    total_distance = 0
     for i in range(len(chain) - 1):
-        totalDistance += distances[(chain[i], chain[i+1])]
-    if maxDistance is None or totalDistance > maxDistance:
-        maxDistance = totalDistance
+        total_distance += distances[(chain[i], chain[i+1])]
+    if max_distance is None or total_distance > max_distance:
+        max_distance = total_distance
 
-print(maxDistance)
+print(max_distance)

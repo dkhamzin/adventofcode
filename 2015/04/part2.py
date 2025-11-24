@@ -4,10 +4,10 @@ with open(".\\2015\\04\\input.txt", "r", encoding="utf-8") as file:
     inputs = file.read()
 
 for i in range(10000000):
-    testString = inputs + str(i)
-    result = hashlib.md5(testString.encode())
-    hashString = result.hexdigest()
+    test_string = inputs + str(i)
+    result = hashlib.md5(test_string.encode())
+    hash_string = result.hexdigest()
 
-    if hashString[0:6] == "000000":
+    if hash_string[0:6] == "000000":
         print(i)
         break

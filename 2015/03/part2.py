@@ -3,12 +3,12 @@ with open(".\\2015\\03\\input.txt", "r", encoding="utf-8") as file:
 
 coords = (0,0)
 
-coordsType = {
+coords_type = {
     "santa": (0,0),
     "robo-santa": (0,0)
 }
 
-coordsDict = {coords: 1}
+coords_dict = {coords: 1}
 
 i = 0
 for char in inputs:
@@ -18,16 +18,16 @@ for char in inputs:
         mover = "robo-santa"
 
     if char == ">" :
-        coordsType[mover] = (coordsType[mover][0] + 1, coordsType[mover][1])
+        coords_type[mover] = (coords_type[mover][0] + 1, coords_type[mover][1])
     elif char == "<" :
-        coordsType[mover] = (coordsType[mover][0] - 1, coordsType[mover][1])
+        coords_type[mover] = (coords_type[mover][0] - 1, coords_type[mover][1])
     elif char == "^" :
-        coordsType[mover] = (coordsType[mover][0], coordsType[mover][1] + 1)
+        coords_type[mover] = (coords_type[mover][0], coords_type[mover][1] + 1)
     elif char == "v" :
-        coordsType[mover] = (coordsType[mover][0], coordsType[mover][1] - 1)
+        coords_type[mover] = (coords_type[mover][0], coords_type[mover][1] - 1)
 
-    coordsDict[coordsType[mover]] = 1
+    coords_dict[coords_type[mover]] = 1
 
     i += 1
 
-print(len(coordsDict))
+print(len(coords_dict))

@@ -1,12 +1,12 @@
 with open(".\\2015\\05\\input.txt", "r", encoding="utf-8") as file:
     inputs = file.read()
 
-niceString = 0
+nice_string = 0
 
 for line in inputs.splitlines():
-    vowCheck = False
-    doubleCheck = False
-    seqCheck = True
+    vow_check = False
+    double_check = False
+    seq_check = True
     vowCount = 0
 
     for i in range(len(line)):
@@ -14,14 +14,14 @@ for line in inputs.splitlines():
             vowCount += 1
         if i < len(line) - 1:
             if line[i] == line[i + 1]:
-                doubleCheck = True
+                double_check = True
             if line[i:i+2] in ["ab", "cd", "pq", "xy"]:
-                seqCheck = False
+                seq_check = False
 
     if vowCount >= 3:
-        vowCheck = True
+        vow_check = True
 
-    if vowCheck and doubleCheck and seqCheck:
-        niceString += 1
+    if vow_check and double_check and seq_check:
+        nice_string += 1
 
-print(niceString)
+print(nice_string)

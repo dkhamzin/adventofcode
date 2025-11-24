@@ -1,11 +1,10 @@
 with open(".\\2015\\08\\input.txt", "r", encoding="utf-8") as file:
     inputs = file.read()
 
-totalDifference = 0
+total_difference = 0
 for line in inputs.splitlines():
-    stringLiteralSize = len(line)
-    newEncodedSize = len(line.replace("\\", "\\\\").replace('"', '\\"')) + 2
-#    print(f"{line}: {stringLiteralSize}, {inMemorySize}")
-    totalDifference += newEncodedSize - stringLiteralSize
+    string_literal_size = len(line)
+    new_encoded_size = len(line.replace("\\", "\\\\").replace('"', '\\"')) + 2
+    total_difference += new_encoded_size - string_literal_size
 
-print(totalDifference)
+print(total_difference)

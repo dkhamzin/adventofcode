@@ -3,7 +3,7 @@ with open(".\\2015\\03\\input.txt", "r", encoding="utf-8") as file:
 
 coords = (0,0)
 
-coordsDict = {coords: 1}
+coords_dict = {coords: 1}
 
 for char in inputs:
     if char == ">" :
@@ -15,6 +15,6 @@ for char in inputs:
     elif char == "v" :
         coords = (coords[0], coords[1] - 1)
 
-    coordsDict[coords] = 1
+    coords_dict[coords] = 1
 
-print(len(coordsDict))
+print(len(coords_dict))
