@@ -21,11 +21,11 @@ def count_neighbors(x, y):
                 count += 1
     return count
 
-accessibleCount = 0
+accessible_count = 0
 for i in range(1, rows - 1):
     for j in range(1, cols - 1):
         if a[i][j] == "@" and count_neighbors(i, j) <= 3:
-            accessibleCount += 1
+            accessible_count += 1
 
 
-print(accessibleCount)
+print(accessible_count)

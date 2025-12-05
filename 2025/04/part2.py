@@ -21,7 +21,7 @@ def count_neighbors(x, y):
                 count += 1
     return count
 
-removedCount = 0
+removed_count = 0
 changed = True
 while changed:
     changed = False
@@ -29,8 +29,8 @@ while changed:
         for j in range(1, cols - 1):
             if a[i][j] == "@" and count_neighbors(i, j) <= 3:
                 a[i][j] = "x"
-                removedCount += 1
+                removed_count += 1
                 changed = True
 
 
-print(removedCount)
+print(removed_count)
