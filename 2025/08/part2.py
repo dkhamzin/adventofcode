@@ -1,4 +1,4 @@
-import itertools, math
+import math
 with open(".\\2025\\08\\input.txt", "r", encoding="utf-8") as file:
     inputs = file.read()
 
